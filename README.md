@@ -1,1 +1,2 @@
-# chatri-com.github.io
+# chatri-com
+⚛ Chatri Khatfan ∙ Quantum &amp; AI Explorer ⚛
