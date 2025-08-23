@@ -13,7 +13,7 @@
   a { text-decoration: none; color: inherit; }
 
   /* Theme Variants */
-  body.light { background: #f8fafc; color: #1e293b; }          /* Crisp bright */
+  body.light { background: #f8fafc; color: #1e293b; }          /* Default light */
   body.light header { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
   body.light footer { background: #0ea5e9; color: #fff; }
   body.light h2 { color: #0ea5e9; }
@@ -24,9 +24,9 @@
   body.dark h2 { color: #60a5fa; }
 
   body.classic { background: #f4efe9; color: #2c1810; }        /* Warm elegant */
-  body.classic header { background: linear-gradient(135deg, #6b4226, #d35400); }
-  body.classic footer { background: #6b4226; color: #fff; }
-  body.classic h2 { color: #d35400; }
+  body.classic header { background: linear-gradient(135deg, #ffb6c1, #ffc0cb); } /* light pink */
+  body.classic footer { background: #ffb6c1; color: #fff; }
+  body.classic h2 { color: #ff69b4; } /* brighter pink for headings */
 
   /* Theme Switcher */
   .theme-switcher {
@@ -72,11 +72,11 @@
 
   /* Timeline */
   .timeline { position: relative; margin: 40px 0; }
-  .timeline::after { content: ''; position: absolute; width: 4px; background: #d35400; top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+  .timeline::after { content: ''; position: absolute; width: 4px; background: #ff69b4; top: 0; bottom: 0; left: 50%; margin-left: -2px; } /* pink line */
   .timeline-item { padding: 20px 40px; position: relative; width: 50%; }
   .timeline-item.left { left: 0; }
   .timeline-item.right { left: 50%; }
-  .timeline-item::before { content: ''; position: absolute; width: 20px; height: 20px; background: #d35400; border-radius: 50%; top: 20px; right: -10px; }
+  .timeline-item::before { content: ''; position: absolute; width: 20px; height: 20px; background: #ff69b4; border-radius: 50%; top: 20px; right: -10px; } /* pink dot */
   .timeline-item.right::before { left: -10px; }
 
   /* Gallery / Projects */
@@ -129,7 +129,7 @@
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
-<body class="classic">
+<body class="light">
 
 <!-- Theme Switcher -->
 <div class="theme-switcher">
@@ -204,14 +204,12 @@
 <section id="videos" class="fade-in">
   <h2>Videos</h2>
   <div class="video-grid">
-    <!-- Old Videos -->
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/acvVE1y7KZE?vq=hd720" title="Intro Video 1" allowfullscreen></iframe>
     </div>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/2Scq7oEv1mw?vq=hd720" title="Intro Video 2" allowfullscreen></iframe>
     </div>
-    <!-- New Videos -->
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/hKpAJQJ0TdQ?vq=hd720" title="Quantum & AI Talk 1" allowfullscreen></iframe>
     </div>
@@ -256,7 +254,7 @@
     localStorage.setItem('theme', theme);
   }
   (function() {
-    const saved = localStorage.getItem('theme') || 'classic'; // default = classic
+    const saved = localStorage.getItem('theme') || 'light'; // default = light
     document.body.className = saved;
   })();
 </script>
